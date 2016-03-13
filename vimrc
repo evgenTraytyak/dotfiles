@@ -76,6 +76,9 @@ NeoBundle 'tpope/vim-fugitive'
 " Shows a git diff in the 'gutter' (sign column)
 NeoBundle 'airblade/vim-gitgutter'
 
+" Editorconfig vim support
+NeoBundle 'editorconfig/editorconfig-vim'
+
 call neobundle#end()
 
 " If there are uninstalled bundles found on startup,
