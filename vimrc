@@ -58,6 +58,10 @@ NeoBundle 'vim-scripts/tlib'
 " Must have
 NeoBundle 'scrooloose/nerdtree'
 
+" Cool statusline for vim
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+
 call neobundle#end()
 
 " Enable Indent in plugins
@@ -74,3 +78,4 @@ NeoBundleCheck
 " Bundles settings
 
 source ~/.dotfiles/.vim/settings/nerdtree.vim
+source ~/.dotfiles/.vim/settings/airline.vim
