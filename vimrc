@@ -53,6 +53,11 @@ NeoBundle 'Shougo/vimproc', {
 " Some support functions used by delimitmate, and snipmate
 NeoBundle 'vim-scripts/tlib'
 
+" Great file system explorer, it appears when you open dir in vim
+" Allow modification of dir, and may other things
+" Must have
+NeoBundle 'scrooloose/nerdtree'
+
 call neobundle#end()
 
 " Enable Indent in plugins
@@ -64,3 +69,8 @@ syntax on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
+
+"--------------------------------------------------
+" Bundles settings
+
+source ~/.dotfiles/.vim/settings/nerdtree.vim
