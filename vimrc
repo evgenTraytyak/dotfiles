@@ -73,6 +73,9 @@ NeoBundle 'joshdick/onedark.vim'
 " Best git wrapper for vim
 NeoBundle 'tpope/vim-fugitive'
 
+" Shows a git diff in the 'gutter' (sign column)
+NeoBundle 'airblade/vim-gitgutter'
+
 call neobundle#end()
 
 " If there are uninstalled bundles found on startup,
