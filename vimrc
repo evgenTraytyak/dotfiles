@@ -58,17 +58,19 @@ NeoBundle 'vim-scripts/tlib'
 " Must have
 NeoBundle 'scrooloose/nerdtree'
 
+" Add smart commands for comments like:
+" gcc - Toggle comment for the current line
+" gc  - Toggle comments for selected region or number of strings
+NeoBundle 'tomtom/tcomment_vim'
+
 " Cool statusline for vim
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 
+" OneDark colorscheme for vim from Atom editor
+NeoBundle 'joshdick/onedark.vim'
+
 call neobundle#end()
-
-" Enable Indent in plugins
-filetype plugin indent on
-
-" Enable syntax highlighting
-syntax on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
@@ -77,5 +79,6 @@ NeoBundleCheck
 "--------------------------------------------------
 " Bundles settings
 
+source ~/.dotfiles/.vim/settings/main.vim
 source ~/.dotfiles/.vim/settings/nerdtree.vim
 source ~/.dotfiles/.vim/settings/airline.vim
