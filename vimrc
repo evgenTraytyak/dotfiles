@@ -70,6 +70,9 @@ NeoBundle 'vim-airline/vim-airline-themes'
 " OneDark colorscheme for vim from Atom editor
 NeoBundle 'joshdick/onedark.vim'
 
+" Best git wrapper for vim
+NeoBundle 'tpope/vim-fugitive'
+
 call neobundle#end()
 
 " If there are uninstalled bundles found on startup,
@@ -82,3 +85,4 @@ NeoBundleCheck
 source ~/.dotfiles/.vim/settings/main.vim
 source ~/.dotfiles/.vim/settings/nerdtree.vim
 source ~/.dotfiles/.vim/settings/airline.vim
+source ~/.dotfiles/.vim/settings/fugitive.vim
