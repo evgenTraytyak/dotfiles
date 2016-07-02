@@ -81,4 +81,4 @@ let g:onedark_terminal_italics=1
 " OneDark colorscheme https://github.com/joshdick/onedark.vim
 colorscheme onedark
 
-highlight ColorColumn ctermbg=lightGrey
+" highlight Comment ctermfg=darkGray ctermbg=lightGray

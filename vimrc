@@ -79,6 +79,24 @@ NeoBundle 'airblade/vim-gitgutter'
 " Editorconfig vim support
 NeoBundle 'editorconfig/editorconfig-vim'
 
+NeoBundle 'easymotion/vim-easymotion'
+
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'statianzo/vim-jade'
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'ap/vim-css-color'
+NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'Shougo/neocomplcache.vim'
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'tpope/vim-surround'
+
+
 call neobundle#end()
 
 " If there are uninstalled bundles found on startup,
@@ -92,3 +110,77 @@ source ~/.dotfiles/.vim/settings/main.vim
 source ~/.dotfiles/.vim/settings/nerdtree.vim
 source ~/.dotfiles/.vim/settings/airline.vim
 source ~/.dotfiles/.vim/settings/fugitive.vim
+
+
+" neosnippets
+
+" Enable snipMate compatibility
+let g:neosnippet#enable_snipmate_compatibility = 1
+
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+
+" Disables standart snippets. We use vim-snippets bundle instead
+let g:neosnippet#disable_runtime_snippets = { '_' : 1 }
+
+" Expand snippet and jimp to next snippet field on Enter key.
+imap <expr><CR> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<CR>""
+
+"-------------------------
+" neocomplcache
+
+" Enable NeocomplCache at startup
+let g:neocomplcache_enable_at_startup = 1
+
+" Max items in code-complete
+let g:neocomplcache_max_list = 10
+
+" Max width of code-complete window
+let g:neocomplcache_max_keyword_width = 80
+
+" Code complete is ignoring case until no Uppercase letter is in input
+let g:neocomplcache_enable_smart_case = 1
+
+" Auto select first item in code-complete
+let g:neocomplcache_enable_auto_select = 1
+
+" Disable auto popup
+let g:neocomplcache_disable_auto_complete = 1
+
+" Smart tab Behavior
+function! CleverTab()
+    " If autocomplete window visible then select next item in there
+    if pumvisible()
+        return "\<C-n>"
+    endif
+    " If it's begining of the string then return just tab pressed
+    let substr = strpart(getline('.'), 0, col('.') - 1)
+    let substr = matchstr(substr, '[^ \t]*$')
+    if strlen(substr) == 0
+        " nothing to match on empty string
+        return "\<Tab>"
+    else
+        " If not begining of the string, and autocomplete popup is not visible
+        " Open this popup
+        return "\<C-x>\<C-u>"
+    endif
+endfunction
+inoremap <expr><TAB> CleverTab()
+
+" Undo autocomplete
+inoremap <expr><C-e> neocomplcache#undo_completion()
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+
+" For cursor moving in insert mode
+inoremap <expr><Left>  neocomplcache#close_popup() . "\<Left>"
+inoremap <expr><Right> neocomplcache#close_popup() . "\<Right>"
+inoremap <expr><Up>    neocomplcache#close_popup() . "\<Up>"
+inoremap <expr><Down>  neocomplcache#close_popup() . "\<Down>"
+
+" disable preview in code complete
+set completeopt-=preview
