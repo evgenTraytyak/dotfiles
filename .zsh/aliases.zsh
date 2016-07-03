@@ -43,6 +43,12 @@ alias gfo="git fetch origin"
 alias gpr="git pull --rebase"
 alias gm="git merge"
 alias gr='git rebase'
+alias gri='git rebase -i'
+alias grc='git rebase --continue'
+
+alias gsts="git stash save"
+alias gstp="git stash pop"
+alias gstl="git stash list"
 
 alias gd="git diff"
 alias gds="git diff --staged"
