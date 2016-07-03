@@ -18,7 +18,8 @@ alias ....="cd ../../.." # Go up three directories
 alias g="git"
 alias gst="git status -s"
 alias gco="git checkout"
-alias gbr="git branch"
+alias gb="git branch"
+alias gbl="git blame -b -w"
 
 alias gpom="git push origin master"
 alias gp="git push"
