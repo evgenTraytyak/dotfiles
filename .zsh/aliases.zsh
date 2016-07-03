@@ -39,6 +39,7 @@ alias gcam="git commit --amend --reuse-message=HEAD"
 alias gl="git --no-pager log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar)%Creset [%an]' --abbrev-commit --date=short -20"
 alias gla="gl -all"
 
+alias gfo="git fetch origin"
 alias gpr="git pull --rebase"
 alias gm="git merge"
 alias gr='git rebase'
