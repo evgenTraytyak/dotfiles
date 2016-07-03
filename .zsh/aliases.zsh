@@ -30,6 +30,7 @@ alias gphm="git push heroku master"
 
 alias grm="git rm"
 alias ga="git add"
+alias gap="git add --patch"
 alias gci="git commit"
 alias gca="git commit --amend"
 alias gcam="git commit --amend --reuse-message=HEAD"
