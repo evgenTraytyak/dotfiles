@@ -1,10 +1,10 @@
-# datarockets dotfiles
+# My dotfiles
 
 ## Install
 
 Clone repository to your home directory:
 ```
-git clone git@github.com:datarockets/dotfiles.git ~/.dotfiles
+git clone git@github.com:evgenTraytyak/dotfiles.git ~/.dotfiles
 ```
 
 Install [rcm](https://github.com/thoughtbot/rcm):
@@ -34,6 +34,6 @@ Put your customizations in dotfiles appended with `.local`:
 Put your name and email to `.gitconfig.local`:
 ```
 [user]
-  name = Dmitry Zhlobo
-  email = dima.zhlobo@datarockets.com
+  name = Eugene Traytyak
+  email = etraytyak@gmail.com
 ```
