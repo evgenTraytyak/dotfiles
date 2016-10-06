@@ -3,7 +3,7 @@
 
 " Colorscheme for airline
 " https://github.com/joshdick/airline-onedark.vim
-let g:airline_theme='onedark'
+let g:airline_theme='oceanicnext'
 
 " Set custom left separator
 let g:airline_left_sep = ''

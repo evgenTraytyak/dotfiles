@@ -26,4 +26,5 @@ nmap <silent> <leader>gca :Gcommit -a<cr>
 nmap <silent> <leader>gcf :Gcommit -a --amend<cr>
 
 " Git log
-nmap <silent> <leader>glog :Git lg<cr>
+nmap <silent> <leader>gl :Git lg<cr>
+

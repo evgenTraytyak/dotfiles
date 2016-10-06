@@ -3,7 +3,15 @@
 
 " Use 256 colors in vim some plugins not work without it
 set t_Co=256
+set background=dark
 
+set encoding=utf-8
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+
+" Toggle auto-indenting for code paste
+set tabstop=2
+set expandtab
+set backspace=2
 " Turn off filetype plugins before bundles init
 filetype off
 
@@ -68,7 +76,7 @@ NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 
 " OneDark colorscheme for vim from Atom editor
-NeoBundle 'joshdick/onedark.vim'
+NeoBundle 'mhartington/oceanic-next'
 
 " Best git wrapper for vim
 NeoBundle 'tpope/vim-fugitive'
@@ -81,7 +89,6 @@ NeoBundle 'editorconfig/editorconfig-vim'
 
 NeoBundle 'easymotion/vim-easymotion'
 
-NeoBundle 'slim-template/vim-slim'
 NeoBundle 'statianzo/vim-jade'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'hail2u/vim-css3-syntax'
@@ -95,8 +102,23 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'isRuslan/vim-es6'
+
+NeoBundle 'ryanoasis/vim-devicons'
 
 
+" Ruby on Rails section
+"--------------------------------------------------
+" Slim lang syntax highlight
+NeoBundle 'slim-template/vim-slim'
+" Ruby on Rails power tools
+NeoBundle 'tpope/vim-rails'
+" Lightweight support for Ruby's Bundler
+NeoBundle 'tpope/vim-bundler'
+
+NeoBundle 'elixir-lang/vim-elixir'
+
+NeoBundle 'slashmili/alchemist.vim'
 call neobundle#end()
 
 " If there are uninstalled bundles found on startup,
