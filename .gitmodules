@@ -1,3 +1,6 @@
 [submodule "antigen"]
 	path = antigen
 	url = git@github.com:zsh-users/antigen.git
+[submodule "iTerm2/oceanic-next-iterm"]
+	path = iTerm2/oceanic-next-iterm
+	url = git@github.com:mhartington/oceanic-next-iterm.git
